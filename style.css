@@ -1,20 +1,24 @@
 body{
+  background-color: #ddd ;
 }
-#menu ul {
+/*#menu ul {
     margin:0;
     padding:0;
     list-style-type:none;
     text-align:left;
+    float: none;
  }
 #menu li {
     float:left;
     margin:auto;
     //padding:10px;
-    background-color:white;
+    background-color:blue;
  }
 #menu li a {
+    
+    background-color: skyblue;
     display:block;
-    margin-left: 100px;
+    margin-left: 10px;
     //width:70px;
     color:black;
     text-decoration:none;
@@ -47,4 +51,75 @@ body{
     float: left;
     padding: 20px;
     
+}*/
+
+#menu a {
+    display:block;   
+    color: #fff;   
+    text-decoration:none;  
+}  
+#menu > li,  
+#menu > li li {  
+    position: relative;  
+    display:inline-block;  
+    width: 110px;  
+    padding: 6px 15px;  
+    background-color: #777;  
+    background-image: linear-gradient(#aaa, #888 50%, #777 50%,#999);  
+}  
+#menu > li li { background: transparent none; }  
+#menu > li li a { color: #444; }  
+#menu > li li:hover { background:#eee; }  
+#menu > li:first-child {  
+    border-right: 1px solid #777;  
+    border-radius: 8px 0 0 8px;  
+}  
+#menu > li + li {  
+    border-left: 1px solid #aaa;  
+    border-right: 1px solid #777;  
+}  
+#menu > li:last-child {  
+    border-right:0;  
+    border-left: 1px solid #aaa;  
+    border-radius: 0 8px 8px 0 ;  
+}  
+#menu > li:hover {  
+    background-color: #999;  
+    background-image: linear-gradient(#ccc, #aaa 50%, #999 50%,#bbb);  
+}  
+/* (presque) fin de la partie positionnement/déco */  
+/* dans cette déclaration, on fixe le max-height */  
+#menu ul {  
+    
+    position: absolute;  
+    top: 2em; left:0;  
+    max-height:0em;   
+    margin:0; padding:0;  
+    background-color:#ddd;  
+    background-image: linear-gradient(#fff,#ddd);  
+    overflow:hidden;  
+    transition: 1s max-height 0.3s;  
+    border-radius: 0 0 8px 8px;  
+}  
+/* ici on change la valeur de max-height au :hover */  
+#menu > li:hover ul {  
+    /* need an adaptation, lower is better, but see it large    */  
+    max-height:13em;  
+}  
+
+p{
+ background-color: #ccc ;
+ text-align: right;  
+ border-width:1px;
+ border-style:dotted;
+ border-color:#ccc;
+ font-weight: bold;
+ font-family: arial;
+ //width: 250px; //Taille de l'encadrement
+ //overflow: hidden;
+ //word-wrap: break-word; //mot coupé si trop grand pour la taille de l'encadré
+ margin : 100px;
+ 
+
+ 
 }
